@@ -3,11 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link href="//db.onlinewebfonts.com/c/03fcaf7d0da77e406be9d1aa9a31962c?family=Indie+Flower" rel="stylesheet"
-    type="text/css" /> -->
   <style>
-    /* @import url(//db.onlinewebfonts.com/c/03fcaf7d0da77e406be9d1aa9a31962c?family=Indie+Flower); */
-
     * {
       box-sizing: border-box;
     }
@@ -23,21 +19,14 @@
       padding: 15px;
     }
 
-    /* @font-face {
-      font-family: "Indie Flower";
-      src: url("//db.onlinewebfonts.com/t/03fcaf7d0da77e406be9d1aa9a31962c.eot");
-      src: url("//db.onlinewebfonts.com/t/03fcaf7d0da77e406be9d1aa9a31962c.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/03fcaf7d0da77e406be9d1aa9a31962c.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/03fcaf7d0da77e406be9d1aa9a31962c.woff") format("woff"), url("//db.onlinewebfonts.com/t/03fcaf7d0da77e406be9d1aa9a31962c.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/03fcaf7d0da77e406be9d1aa9a31962c.svg#Indie Flower") format("svg");
-    } */
-
     html {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'roboto';
       font-family: 'Indie Flower';
     }
 
     body {
       min-width: 380px;
       height: fit-content;
-      /* font-family: cursive;  */
     }
 
     .header {
@@ -239,12 +228,12 @@
       align-items: center; */
     }
 
-    .title>h3 {
-      font-size: 27px;
+    .title h3 {
+      font-size: 24px;
       display: inline-flex;
       align-items: center;
       margin-bottom: 10px;
-      min-width: 180px;
+      min-width: 200px;
     }
 
     .about-img {
@@ -301,11 +290,15 @@
       .footer a>p {
         display: none;
       }
+
+      li p {
+        display: none;
+      }
     }
 
     @media only screen and (max-width: 820px) {
       li img {
-        height: 144px;
+        height: 174px;
         position: relative;
         top: -15px;
         right: -38px;
@@ -319,6 +312,14 @@
         margin: 60px auto;
         max-width: 80%;
         width: 100%;
+      }
+
+      .title {
+        display: table-caption;
+      }
+
+      .title>p {
+        min-width: 340px;
       }
     }
 
@@ -364,24 +365,20 @@
       }
 
       li img {
-        height: 159px;
-        position: relative;
-        top: 0px;
-        right: -10px;
-      }
-
-      li p {
-        display: none;
-      }
-    }
-
-    @media only screen and (max-width: 400px) {
-      li img {
         height: 99px;
         position: relative;
         top: 18px;
         right: -10px;
       }
+    }
+
+    @media only screen and (max-width: 400px) {
+      /* li img {
+        height: 99px;
+        position: relative;
+        top: 18px;
+        right: -10px;
+      } */
     }
 
     @media only screen and (min-width: 600px) {
@@ -489,6 +486,12 @@
 
 
     }
+
+    @media only screen and (min-width: 651px) {
+      .title h3 {
+        min-width: 150px;
+      }
+    }
   </style>
 </head>
 
@@ -537,8 +540,11 @@
             <li style="background: #7fb0b1;">
               <div>
                 <div class="title">
-                  <h3>E-commerce - "Sweet Sensation"
-                  </h3>
+                  <div>
+                    <h3>E-commerce - </h3>
+                    <h3> "Sweet Sensation"</h3>
+                  </div>
+
                   <p>From today you dont need to know how to bake in order to give your personal touch!
                     On "Sweet Sensation" you can design
                     the cake to your personal taste.
@@ -550,9 +556,7 @@
                   <div>></div>
                 </div>
               </div>
-              <div style="display: inline-flex;">
-                <img class="li-img" src="../assets/computer.png">
-              </div>
+              <img class="li-img" src="../assets/computer.png">
             </li>
             <li style="background: #a2b3e1;">
               <div>
