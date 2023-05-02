@@ -312,6 +312,7 @@
         margin: 60px auto;
         max-width: 80%;
         width: 100%;
+        border-radius: 25px;
       }
 
       .title {
@@ -595,13 +596,13 @@
   </div>
 
   <div id="carbo" class="form">
-    <div style="display: table;margin: 30px;margin: -6px auto;">
+    <div style="display: table;margin: 30px;margin: -8px auto;">
       <img style="height:unset; width: 100%;" src="../assets/appcarbo.png">
     </div>
   </div>
 
   <div id="sweet" class="form">
-    <div style="display: table;margin: 30px;margin: -5px auto;">
+    <div style="display: table;margin: 30px;margin: -8px auto;">
       <img style="height:unset; width: 100%;" src="../assets/sweet.png">
     </div>
   </div>
@@ -662,6 +663,7 @@ function ShowForm(form) {
     _footer.classList.add(form);
     _menu.style.display="block";
     ShowMenu();
+    window.scrollTo(0,0);
 }
 
 function HideForm(form) {
