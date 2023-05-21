@@ -27,6 +27,7 @@
     body {
       min-width: 380px;
       height: fit-content;
+     zoom: 1.15;
     }
 
     .header {
@@ -40,6 +41,7 @@
       height: 62px;
       z-index: 999;
       background-color: rgba(255, 255, 255, 0.2);
+     
     }
 
     .menu ul {
@@ -74,7 +76,7 @@
       display: flex;
       margin-bottom: 35px;
       padding: 25px;
-      border-radius: 14px;
+      border-radius: 5px;
     }
 
     li p {
@@ -140,8 +142,9 @@
     }
 
     .hello-container {
-      margin-top: 84px;
+      margin-top: 55px;
       text-align: center;
+      zoom: 2.05;
     }
 
     .hello img {
@@ -258,6 +261,50 @@
       height: 500px;
       border-radius: 25px;
     }
+
+    @keyframes marker {
+      from {
+        background-size: 0 135%;
+      }
+    }
+
+    .line {
+      height: 1px;
+      background-image: url("../assets/line\ copy.png");
+      background-repeat: repeat-x;
+      transform: skew(-20deg);
+      background-position: 0 .2em;
+      background-size: 121% 135%;
+      background-repeat: no-repeat;
+      transition: background .5s;
+      animation: marker 1s linear;
+      z-index: -1;
+    }
+
+    /* .underlined {
+      flex: 1;
+      line-height: 1.2;
+      text-decoration: none;
+      background-image: linear-gradient(to right,
+          rgba(112, 248, 180, 0.1),
+          rgba(112, 248, 180, 0.7) 4%,
+          rgba(112, 248, 180, 0.3));
+      transform: skew(-20deg);
+      background-position: 0 .2em;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      transition: background .5s;
+      animation: marker 1s linear; */
+    /* 
+      content: "";
+      position: relative;
+      width: calc(100% + 4px);
+      height: 60%;
+      left: -2px;
+      bottom: 0;
+      z-index: -1;
+      transform: rotate(-2deg); 
+    }*/
 
     @keyframes jump {
       0% {
@@ -527,10 +574,10 @@
             <h1 style="bottom: -15px;position: relative;">Hello,</h1>
             <img src="../assets/vavik.png">
           </div>
-          <h2> I'm meirav, a Product Designer</h1>
+          <h2> I'm meirav, a <span class="line"> Product Designer</span></h1>
             <p style="color: #808091">Passiont designer with Creative and full of
               ambition</p>
-            <img class="jump" src="../assets/chevron.svg">
+            <img class="jump" style="width: 48px; height:30px ;" src="../assets/chevron.svg">
         </div>
         <div style="padding-bottom: 10px; ">
           <h3 style="margin-left: 43px;font-size: 24px;font-style: normal;margin-top: 30px;padding-top: 14px;">My
