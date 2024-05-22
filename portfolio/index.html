@@ -27,7 +27,7 @@
     body {
       min-width: 380px;
       height: fit-content;
-     zoom: 1.15;
+      zoom: 1.15;
     }
 
     .header {
@@ -41,7 +41,7 @@
       height: 62px;
       z-index: 999;
       background-color: rgba(255, 255, 255, 0.2);
-     
+
     }
 
     .menu ul {
@@ -134,6 +134,12 @@
       background: #0098bb;
 
     }
+
+    .footer.ShapeApp {
+      background: rgba(59, 35, 131, 0.1);
+
+    }
+
 
     .hello {
       margin-top: 30px;
@@ -249,10 +255,10 @@
 
     li img {
       height: 344px;
-      right: -55px;
+      right: 55px;
       background: transparent;
       position: relative;
-      top: -15px;
+      /* top: -15px; */
       display: block;
     }
 
@@ -281,31 +287,6 @@
       z-index: -1;
     }
 
-    /* .underlined {
-      flex: 1;
-      line-height: 1.2;
-      text-decoration: none;
-      background-image: linear-gradient(to right,
-          rgba(112, 248, 180, 0.1),
-          rgba(112, 248, 180, 0.7) 4%,
-          rgba(112, 248, 180, 0.3));
-      transform: skew(-20deg);
-      background-position: 0 .2em;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      transition: background .5s;
-      animation: marker 1s linear; */
-    /* 
-      content: "";
-      position: relative;
-      width: calc(100% + 4px);
-      height: 60%;
-      left: -2px;
-      bottom: 0;
-      z-index: -1;
-      transform: rotate(-2deg); 
-    }*/
-
     @keyframes jump {
       0% {
         transform: translate3d(0, 0, 0);
@@ -329,7 +310,7 @@
 
 
     @media only screen and (max-width: 650px) {
-      .hello-container{
+      .hello-container {
         zoom: normal;
       }
 
@@ -544,13 +525,18 @@
         min-width: 150px;
       }
     }
+
+    li>div {
+      margin: auto 0;
+      flex:1;
+    }
   </style>
 </head>
 
-<body onload="javascript: OnLoad();;" onscroll="javascript: PaintLogo();">
+<body onload="javascript: OnLoad();" onscroll="javascript: PaintLogo();">
   <div class="header">
     <div id="logo">
-      <img src="../assets/meravlogo.svg">
+      <img src="../assets/meravlogo.svg"  onClick="javascript: ShowForm('main');StopVideo()">
     </div>
     <div style="flex:1"> </div>
     <div class="menu">
@@ -589,7 +575,23 @@
           </h3>
           <p style="margin-left: 43px;font-size: 18px;">Ui/Ux Projects</p>
           <ul id="projects" style="color: white; max-width: 95%;">
-            <li style="background: #7fb0b1;">
+            <li style="background: #b3d9e0;">
+              <div>
+                <div class="title">
+                  <h3>Carbo. App</h3>
+                  <p>You don't need to be an accountant to eat right,carbo will do it for you.
+                    Eat, enjoy and leave the calculations to carbo.
+                    So what are you waiting for?
+                    Let's start calculat together!</p>
+                </div>
+                <div class="caseStudyLink">
+                  <a href="javascript: ShowForm('carbo');">View Case Study</a>
+                  <div>></div>
+                </div>
+              </div>
+              <img class="li-img" src="../assets/65975 copy.png">
+            </li>
+            <li style="background: #2a9da4;">
               <div>
                 <div class="title">
                   <div>
@@ -610,21 +612,35 @@
               </div>
               <img class="li-img" src="../assets/computer.png">
             </li>
-            <li style="background: #a2b3e1;">
+            <li style="background: #f2d6a1;">
               <div>
                 <div class="title">
-                  <h3>Carbo. App</h3>
-                  <p>You don't need to be an accountant to eat right,carbo will do it for you.
-                    Eat, enjoy and leave the calculations to carbo.
-                    So what are you waiting for?
-                    Let's start calculat together!</p>
+                  <h3>ShapeApp</h3>
+                  <p>Encourages a healthy lifestyle.
+                    Start strengthening your muscles and self-confidence.
+                    all in one app.
+                  </p>
                 </div>
                 <div class="caseStudyLink">
-                  <a href="javascript: ShowForm('carbo');">View Case Study</a>
+                  <a href="javascript: ShowForm('ShapeApp');">View Case Study</a>
                   <div>></div>
                 </div>
               </div>
-              <img class="li-img" src="../assets/65975 copy.png">
+              <img class="li-img"  src="../assets/opentrenning.png">
+            </li>
+            <li style="background: #f1a805;">
+              <div>
+                <div class="title">
+                  <h3>Flyers</h3>
+                  <p>Flyer Design.
+                  </p>
+                </div>
+                <div class="caseStudyLink">
+                  <a href="javascript: ShowForm('flyers');">View Some</a>
+                  <div>></div>
+                </div>
+              </div>
+              <img class="li-img"  src="../assets/4.png">
             </li>
           </ul>
 
@@ -652,11 +668,24 @@
     </div>
   </div>
 
+  <div id="ShapeApp" class="form">
+    <div style="display: table;margin: 30px;margin: -8px auto; background: rgba(59,35,131,0.1);">
+      <img style="height:unset; width: 100%;" src="../assets/trennig.png">
+    </div>
+  </div>
+
   <div id="sweet" class="form">
     <div style="display: table;margin: 30px;margin: -8px auto;">
       <img style="height:unset; width: 100%;" src="../assets/sweet.png">
     </div>
   </div>
+
+  <div id="flyers" class="form">
+    <div style="display: table;margin: 30px;margin: -8px auto;">
+      <img style="height:unset; width: 100%;" src="../assets/flyers.png">
+    </div>
+  </div>
+
   <div id=footer class="footer">
     <div>
       <a href="../assets/Meirav Ochayon Feldman C.V.pdf">
